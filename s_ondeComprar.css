@@ -1,4 +1,50 @@
+body {
+  color: white;
+  margin: 0px;
+  display: grid;
+}
 
+nav {
+  margin-top: 0px;
+  padding: 1px;
+  width: 100%;
+  max-height: 65px;
+  background-color: rgb(176, 209, 183);
+}
+
+.navList {
+  margin-left: 2%;
+  text-align: left;
+}
+
+.atual a{
+  color: black;
+}
+
+.navList li{
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  display: inline;
+  list-style: none;
+  gap: 0. 5%;
+  transition: transform 0.2s;
+}
+.navList li :hover{
+  font-family: 'Roboto', sans-serif;
+  color: rgb(20, 31, 2);
+  transform: scale(1.05);
+  transition: transform 0.2s;
+}
+
+.navList a{
+  text-decoration: none;
+  color: rgb(51, 66, 35);
+  margin-left: 1%;
+}
+
+  
+  
+  
   .container {
     position: relative;
     padding: 15px;

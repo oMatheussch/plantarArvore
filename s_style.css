@@ -5,7 +5,7 @@ body {
 }
 
 /*NAVBAR - MENU*/
-#navbar {
+nav {
     margin-top: 0px;
     padding: 1px;
     width: 100%;
@@ -13,27 +13,27 @@ body {
     background-color: rgb(176, 209, 183);
 }
 
-#navList {
-    margin-left: 5%;
-    display: flex;
-    justify-content: ;
+.navList {
+    margin-left: 2%;
+    text-align: left;
 }
 
-.li{
+.navList li{
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
+    display: inline;
     list-style: none;
     gap: 0. 5%;
     transition: transform 0.2s;
 }
-.li :hover{
+.navList li :hover{
     font-family: 'Roboto', sans-serif;
     color: rgb(20, 31, 2);
     transform: scale(1.05);
     transition: transform 0.2s;
 }
 
-#navList a{
+.navList a{
     text-decoration: none;
     color: rgb(51, 66, 35);
     margin-left: 1%;
@@ -46,10 +46,8 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     width: auto;
-    max-height: 1080px;
-    display: flex;
-    flex-direction: column;
-    padding: 30px;  
+    max-height: 1500px; 
+    min-height: 920px;
 }
 
 
@@ -57,6 +55,7 @@ body {
 .title {
     font-family: 'Roboto', sans-serif;
     margin-left: 5%;
+    margin-right: 5%;
     margin-top: 2%;
     font-size: 23px;
     max-width: 700px;
@@ -66,18 +65,16 @@ body {
 
 .title h2{
     font-family: 'Roboto', sans-serif;
-    font-size: 30px;
+    font-size: blod;
 }
 
 
 .cards {
     font-family: 'Roboto', sans-serif;
     text-align: center;
-    color: rgb(255, 255, 255);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 25px;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 3%;
     transition: transform 0.5s;
 }
 .cards :hover {
@@ -86,16 +83,18 @@ body {
 }
 
 .cardsObjects {
+    font-family: 'Roboto', sans-serif;
     font-size: 18px;
-    background-color: rgb(170, 190, 148);
-    padding: 20px;
-    margin-bottom: 1%;
+    background-color: rgba(170, 190, 148, 0.8);
+    padding: 25px;
+    margin: 0.5%;
     border-radius: 25px;
-    max-width: 400px;
-    height: 200px;
+    width: 350px;
+    height: 180px;
+    display: inline-block;
+    transition: transform 0.2s;
 }
 
-
 .cardsObjects h2 {
-    font-size: 23px;
+    font-size: 20px;
 }
