@@ -22,4 +22,4 @@ function prevSlide() {
     showSlide(currentSlide - 1);
 }
 
-setInterval(nextSlide, 3000);
+//setInterval(nextSlide, 3000); (setando intervalo de tempo ficou estranho)
