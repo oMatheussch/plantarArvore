@@ -1,71 +1,25 @@
-const controls = document.querySelectorAll(".control");
-let currentItem = 0;
-const items = document.querySelectorAll(".item");
-const maxItems = items.length;
+let currentSlide = 0;
 
-controls.forEach((control) => {
-  control.addEventListener("click", (e) => {
-    isLeft = e.target.classList.contains("arrow-left");
-
-    if (isLeft) {
-      currentItem -= 1;
+function showSlide(index) {
+    const slides = document.querySelector('.slider-content');
+    if (index < 0) {
+        currentSlide = slides.children.length - 1;
+    } else if (index >= slides.children.length) {
+        currentSlide = 0;
     } else {
-      currentItem += 1;
+        currentSlide = index;
     }
 
-    if (currentItem >= maxItems) {
-      currentItem = 0;
-    }
+    const translateValue = -currentSlide * (100 / 5) + '%';
+    slides.style.transform = 'translateX(' + translateValue + ')';
+}
 
-    if (currentItem < 0) {
-      currentItem = maxItems - 1;
-    }
+function nextSlide() {
+    showSlide(currentSlide + 1);
+}
 
-    items.forEach((item) => item.classList.remove("current-item"));
+function prevSlide() {
+    showSlide(currentSlide - 1);
+}
 
-    items[currentItem].scrollIntoView({
-      behavior: "smooth",
-      inline: "center"
-    });
-
-    items[currentItem].classList.add("current-item");
-  });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  let currentSlide = 0;
-  const slides = document.querySelectorAll("#cardsObjects");
-  const totalSlides = slides.length;
-
-  // Exibe o slide atual
-  function showSlide(index) {
-      slides.forEach((slide) => {
-          slide.style.display = "none";
-      });
-      slides[index].style.display = "block";
-  }
-
-  // Avança para o próximo slide
-  function nextSlide() {
-      currentSlide = (currentSlide + 1) % totalSlides;
-      showSlide(currentSlide);
-  }
-
-  // Retrocede para o slide anterior
-  function prevSlide() {
-      currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-      showSlide(currentSlide);
-  }
-
-  // Adiciona eventos aos botões de navegação
-  document.querySelector("#cards").addEventListener("click", function (event) {
-      if (event.target.classList.contains("prev-btn")) {
-          prevSlide();
-      } else if (event.target.classList.contains("next-btn")) {
-          nextSlide();
-      }
-  });
-
-  // Inicia o carrossel exibindo o primeiro slide
-  showSlide(currentSlide);
-});
+setInterval(nextSlide, 3000);
