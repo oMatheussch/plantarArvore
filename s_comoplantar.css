@@ -46,7 +46,7 @@ nav {
     background-size: cover;
     background-repeat: no-repeat;
     width: auto;
-    max-height: 1500px; 
+    max-height: 2000px; 
     min-height: 920px;
 }
 
@@ -89,8 +89,8 @@ nav {
     padding: 25px;
     margin: 0.5%;
     border-radius: 25px;
-    width: 350px;
-    height: 180px;
+    width: calc(33.33% - 20px); 
+    min-width: 300px; 
     display: inline-block;
     transition: transform 0.2s;
 }
